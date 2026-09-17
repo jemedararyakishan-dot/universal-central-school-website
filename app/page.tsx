@@ -8,7 +8,7 @@ export default function Home() {
       <nav className="relative z-50 w-full bg-[#252344]">
         <div className="mx-auto flex max-w-7xl items-start justify-between px-6 lg:px-10">
 
-          {/* LOGO — separate white plaque */}
+          {/* LOGO */}
           <a
             href="/"
             className="flex h-[110px] w-[105px] items-center justify-center rounded-b-md bg-white p-3 shadow-xl"
@@ -23,7 +23,7 @@ export default function Home() {
             />
           </a>
 
-          {/* NAVIGATION */}
+          {/* DESKTOP NAVIGATION */}
           <div className="hidden items-center gap-8 pt-7 text-sm font-medium text-white lg:flex">
 
             <a
@@ -48,7 +48,7 @@ export default function Home() {
             </a>
 
             <a
-              href="#campus"
+              href="#life"
               className="transition hover:text-[#e4c477]"
             >
               Campus
@@ -63,12 +63,66 @@ export default function Home() {
 
             <a
               href="#contact"
-              className="rounded-full bg-[#252344] px-6 py-3 text-white shadow-lg transition hover:bg-[#3d3765]"
+              className="rounded-full bg-[#e4c477] px-6 py-3 font-medium text-[#252344] shadow-lg transition hover:bg-white"
             >
               Enquire Now
             </a>
 
           </div>
+
+
+          {/* MOBILE MENU */}
+          <details className="relative mt-6 lg:hidden">
+            <summary className="cursor-pointer list-none rounded-full border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-white/10">
+              Menu
+            </summary>
+
+            <div className="absolute right-0 mt-3 w-52 rounded-xl bg-white p-3 text-[#252344] shadow-2xl">
+
+              <a
+                href="#about"
+                className="block rounded-lg px-4 py-3 text-sm hover:bg-[#f7f4ed]"
+              >
+                About
+              </a>
+
+              <a
+                href="#academics"
+                className="block rounded-lg px-4 py-3 text-sm hover:bg-[#f7f4ed]"
+              >
+                Academics
+              </a>
+
+              <a
+                href="#life"
+                className="block rounded-lg px-4 py-3 text-sm hover:bg-[#f7f4ed]"
+              >
+                Student Life
+              </a>
+
+              <a
+                href="#life"
+                className="block rounded-lg px-4 py-3 text-sm hover:bg-[#f7f4ed]"
+              >
+                Campus
+              </a>
+
+              <a
+                href="#admissions"
+                className="block rounded-lg px-4 py-3 text-sm hover:bg-[#f7f4ed]"
+              >
+                Admissions
+              </a>
+
+              <a
+                href="#contact"
+                className="mt-2 block rounded-lg bg-[#252344] px-4 py-3 text-center text-sm font-medium text-white"
+              >
+                Enquire Now
+              </a>
+
+            </div>
+          </details>
 
         </div>
       </nav>
@@ -77,7 +131,6 @@ export default function Home() {
       {/* ================= HERO ================= */}
       <section className="relative min-h-screen overflow-hidden">
 
-        {/* FULL SCHOOL PHOTOGRAPH */}
         <Image
           src="/school.png"
           alt="Universal Central School campus"
@@ -87,10 +140,8 @@ export default function Home() {
           className="scale-[1.02] object-cover object-center"
         />
 
-        {/* TEXT-SIDE GRADIENT */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#171633]/75 via-[#171633]/30 to-transparent" />
 
-        {/* HERO CONTENT */}
         <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl items-end px-6 pb-20 lg:px-10 lg:pb-24">
 
           <div className="max-w-4xl text-white">
@@ -134,7 +185,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* SMALL GRADE LABEL */}
         <div className="absolute bottom-8 right-8 z-10 hidden text-xs uppercase tracking-[0.25em] text-white/70 lg:block">
           Nursery — Grade 7
         </div>
@@ -262,11 +312,11 @@ export default function Home() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
 
             <Image
-            src="/classroom.jpeg"
-            alt="Students learning in a Universal Central School classroom"
-            fill
-            sizes="(max-width: 1024px) 100vw, 60vw"
-            className="object-cover transition duration-700 hover:scale-105"
+              src="/classroom.jpeg"
+              alt="Students learning in a Universal Central School classroom"
+              fill
+              sizes="(max-width: 1024px) 100vw, 60vw"
+              className="object-cover transition duration-700 hover:scale-105"
             />
 
           </div>
@@ -325,6 +375,7 @@ export default function Home() {
               src="/activity.jpeg"
               alt="Students participating in activities at Universal Central School"
               fill
+              sizes="(max-width: 1024px) 100vw, 100vw"
               className="object-cover"
             />
 
@@ -392,8 +443,9 @@ export default function Home() {
         className="bg-[#171633] px-6 py-16 text-white lg:px-10"
       >
 
-        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-4">
 
+          {/* BRAND */}
           <div>
 
             <Image
@@ -413,6 +465,7 @@ export default function Home() {
           </div>
 
 
+          {/* EXPLORE */}
           <div>
 
             <p className="mb-5 text-sm uppercase tracking-[0.2em] text-[#e4c477]">
@@ -421,19 +474,31 @@ export default function Home() {
 
             <div className="flex flex-col gap-3 text-white/65">
 
-              <a href="#about" className="hover:text-white">
+              <a
+                href="#about"
+                className="transition hover:text-white"
+              >
                 About
               </a>
 
-              <a href="#academics" className="hover:text-white">
+              <a
+                href="#academics"
+                className="transition hover:text-white"
+              >
                 Academics
               </a>
 
-              <a href="#life" className="hover:text-white">
+              <a
+                href="#life"
+                className="transition hover:text-white"
+              >
                 Student Life
               </a>
 
-              <a href="#admissions" className="hover:text-white">
+              <a
+                href="#admissions"
+                className="transition hover:text-white"
+              >
                 Admissions
               </a>
 
@@ -442,6 +507,7 @@ export default function Home() {
           </div>
 
 
+          {/* CONTACT */}
           <div>
 
             <p className="mb-5 text-sm uppercase tracking-[0.2em] text-[#e4c477]">
@@ -454,17 +520,110 @@ export default function Home() {
               Universal Central School
             </p>
 
-            <button className="mt-6 rounded-full border border-white/20 px-5 py-3 text-sm hover:bg-white hover:text-[#171633]">
+            {/* Replace # with the official ERP URL when available */}
+            <a
+              href="#"
+              className="mt-6 inline-block rounded-full border border-white/20 px-5 py-3 text-sm transition hover:bg-white hover:text-[#171633]"
+            >
               Parent Login
-            </button>
+            </a>
+
+          </div>
+
+
+          {/* SOCIALS */}
+          <div>
+
+            <p className="mb-5 text-sm uppercase tracking-[0.2em] text-[#e4c477]">
+              Connect
+            </p>
+
+            <div className="flex items-center gap-3">
+
+              {/* INSTAGRAM */}
+              <a
+                href="https://www.instagram.com/universal_central_school/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Universal Central School on Instagram"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition hover:bg-white hover:text-[#171633]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  className="h-5 w-5"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="5"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="4"
+                  />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="1"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+
+
+              {/* YOUTUBE */}
+              <a
+                href="https://www.youtube.com/@universalcentralschoolmbnr"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Universal Central School on YouTube"
+                className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition hover:bg-white hover:text-[#171633]"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-5 w-5"
+                >
+                  <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8Z" />
+                  <path
+                    d="m9.75 15.5 5.5-3.5-5.5-3.5v7Z"
+                    fill="#171633"
+                  />
+                </svg>
+              </a>
+
+            </div>
+
+            <p className="mt-5 max-w-xs text-sm leading-6 text-white/40">
+              Follow Universal Central School for school activities,
+              celebrations and updates.
+            </p>
 
           </div>
 
         </div>
 
 
-        <div className="mx-auto mt-16 max-w-7xl border-t border-white/10 pt-6 text-sm text-white/35">
-          © {new Date().getFullYear()} Universal Central School. All rights reserved.
+        {/* BOTTOM FOOTER */}
+        <div className="mx-auto mt-16 flex max-w-7xl flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/35 lg:flex-row lg:items-center lg:justify-between">
+
+          <p>
+            © {new Date().getFullYear()} Universal Central School. All rights reserved.
+          </p>
+
+          <p>
+            Mahabubnagar, Telangana
+          </p>
+
         </div>
 
       </footer>
