@@ -53,7 +53,7 @@ export default function PhotoPlaceholder({
   // Otherwise, render a premium dark editorial placeholder frame
   return (
     <div
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-[2rem] border border-white/15 bg-[#08142C]/90 p-6 text-white shadow-2xl backdrop-blur-xl transition duration-500 hover:border-[#D4A853]/40 ${className}`}
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-[1.75rem] sm:rounded-[2rem] border border-white/15 bg-[#08142C]/90 p-4 sm:p-6 text-white shadow-2xl backdrop-blur-xl transition duration-500 hover:border-[#D4A853]/40 ${className}`}
     >
       {/* Ambient background glow */}
       <div className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#D4A853]/15 blur-3xl transition duration-700 group-hover:scale-125" />
@@ -71,14 +71,14 @@ export default function PhotoPlaceholder({
 
       {/* Top bar: Badge & Aperture Icon */}
       <div className="relative z-10 flex items-center justify-between gap-2">
-        <span className="inline-flex items-center gap-2 rounded-full border border-[#D4A853]/40 bg-[#D4A853]/10 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#DFB76C]">
+        <span className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-[#D4A853]/40 bg-[#D4A853]/10 px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-[9px] sm:text-[10px] font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[#DFB76C]">
           <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-[#D4A853]" />
           Photo Needed
         </span>
 
-        <div className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/50 transition group-hover:border-[#D4A853]/40 group-hover:text-[#DFB76C]">
+        <div className="flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/50 transition group-hover:border-[#D4A853]/40 group-hover:text-[#DFB76C]">
           {/* Camera / Aperture Icon */}
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
             <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
             <circle cx="12" cy="13" r="4" />
           </svg>
@@ -86,26 +86,26 @@ export default function PhotoPlaceholder({
       </div>
 
       {/* Center visual framing lines */}
-      <div className="relative z-10 my-8 flex flex-col items-center justify-center text-center">
-        <div className="relative mb-3 flex h-14 w-14 items-center justify-center rounded-2xl border border-dashed border-white/20 bg-white/[0.02]">
+      <div className="relative z-10 my-4 sm:my-8 flex flex-col items-center justify-center text-center">
+        <div className="relative mb-2.5 sm:mb-3 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border border-dashed border-white/20 bg-white/[0.02]">
           <span className="text-xs uppercase tracking-widest text-white/30 font-mono">+</span>
         </div>
-        <p className="text-base font-semibold tracking-tight text-white md:text-lg">
+        <p className="text-sm sm:text-base md:text-lg font-semibold tracking-tight text-white">
           {title}
         </p>
         {subtitle && (
-          <p className="mt-1.5 max-w-xs text-xs leading-relaxed text-white/50">
+          <p className="mt-1 sm:mt-1.5 max-w-xs text-[11px] sm:text-xs leading-relaxed text-white/50">
             {subtitle}
           </p>
         )}
       </div>
 
       {/* Bottom bar: Specifications guidance */}
-      <div className="relative z-10 flex items-center justify-between border-t border-white/10 pt-4 text-[11px] text-white/40">
-        <span className="font-mono tracking-wider uppercase">
+      <div className="relative z-10 flex items-center justify-between border-t border-white/10 pt-3 sm:pt-4 text-[10px] sm:text-[11px] text-white/40">
+        <span className="font-mono tracking-wider uppercase truncate max-w-[65%]">
           {specs || "High resolution required"}
         </span>
-        <span className="text-[10px] uppercase tracking-widest text-[#DFB76C]/70">
+        <span className="text-[9px] sm:text-[10px] uppercase tracking-widest text-[#DFB76C]/70 shrink-0">
           UCS Archive
         </span>
       </div>
