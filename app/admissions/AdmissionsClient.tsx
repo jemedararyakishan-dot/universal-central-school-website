@@ -52,11 +52,35 @@ export default function AdmissionsPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Non-destructive placeholder simulation: displays polite confirmation state without sending data to unknown endpoints
-    setSubmitted(true);
+    setSubmitting(true);
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "Admissions Enquiry",
+          ...formData,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to record enquiry");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      setErrorMsg("Unable to connect to school server right now. Please call our office directly at +91 9848228013.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -410,12 +434,19 @@ export default function AdmissionsPage() {
                   />
                 </div>
 
+                {errorMsg && (
+                  <div className="p-3 rounded-xl border border-red-500/30 bg-red-500/10 text-xs text-red-400">
+                    {errorMsg}
+                  </div>
+                )}
+
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-8 py-4 text-sm font-bold text-[#0B1733] shadow-[0_8px_25px_rgba(212,168,83,0.3)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_35px_rgba(212,168,83,0.45)]"
+                    disabled={submitting}
+                    className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-8 py-4 text-sm font-bold text-[#0B1733] shadow-[0_8px_25px_rgba(212,168,83,0.3)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_35px_rgba(212,168,83,0.45)] disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    Submit Admission Enquiry →
+                    {submitting ? "Submitting Enquiry..." : "Submit Admission Enquiry →"}
                   </button>
                 </div>
               </form>

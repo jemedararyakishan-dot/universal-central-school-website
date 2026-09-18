@@ -1,0 +1,46 @@
+[
+  {
+    "timestamp": "2026-09-18T20:50:30.317Z",
+    "type": "Admissions Enquiry",
+    "parentName": "Suresh Reddy",
+    "studentName": "Sai Varun",
+    "grade": "Class 2",
+    "branch": "Sri Ramakrishna Colony",
+    "phone": "+91 9848228013",
+    "email": "suresh@example.com",
+    "message": "Looking for admission details for 2024-25 session."
+  },
+  {
+    "timestamp": "2026-09-18T20:52:22.401Z",
+    "type": "Admissions Enquiry",
+    "parentName": "hi",
+    "studentName": "heloo",
+    "grade": "Class 3",
+    "branch": "Sri Ramakrishna Colony",
+    "phone": "987654321",
+    "email": "",
+    "message": "hmmm"
+  },
+  {
+    "timestamp": "2026-09-18T20:59:16.231Z",
+    "type": "Admissions (Chatbot)",
+    "parentName": "Srikanth Reddy",
+    "studentName": "Ananya Reddy",
+    "grade": "Class 1",
+    "branch": "Mettugadda Branch",
+    "phone": "+91 98480 12345",
+    "email": "srikanth.reddy.test@example.com",
+    "message": "Interested in Class 1 admissions for academic year 2025-26."
+  },
+  {
+    "timestamp": "2026-09-18T21:00:42.845Z",
+    "type": "Admissions (Chatbot)",
+    "parentName": "vicky",
+    "studentName": "ram",
+    "grade": "Class 3",
+    "branch": "Sri Ramakrishna Colony (Yenugonda)",
+    "phone": "239475623",
+    "email": "",
+    "message": "No additional comments"
+  }
+]

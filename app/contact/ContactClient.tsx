@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -15,9 +14,40 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setErrorMsg("");
+
+    try {
+      const res = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          type: "General Contact",
+          parentName: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          branch: formData.branch,
+          message: `[Subject: ${formData.subject}] ${formData.message}`,
+        }),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to record inquiry");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      setErrorMsg("Unable to connect to school server right now. Please call our office directly at +91 9848228013.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -321,11 +351,18 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {errorMsg && (
+                      <div className="p-3 rounded-xl border border-red-500/30 bg-red-500/10 text-xs text-red-400">
+                        {errorMsg}
+                      </div>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-8 py-3.5 text-xs sm:text-sm font-bold text-[#0B1733] shadow-md transition duration-300 hover:-translate-y-0.5"
+                      disabled={submitting}
+                      className="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-8 py-3.5 text-xs sm:text-sm font-bold text-[#0B1733] shadow-md transition duration-300 hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
-                      Send Message →
+                      {submitting ? "Sending Message..." : "Send Message →"}
                     </button>
                   </form>
                 )}
