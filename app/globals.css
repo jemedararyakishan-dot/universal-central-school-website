@@ -1,19 +1,180 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f6f2;
-  --foreground: #0b1b3d;
+  /* =========================================================
+     LIGHT THEME (Default) — Warm Alabaster & Deep Navy
+     ========================================================= */
+  --ucs-bg-page: #fbfbfa;
+  --ucs-bg-page-rgb: 251, 251, 250;
+  
+  --ucs-bg-hero: linear-gradient(180deg, #fbfbfa 0%, #f4f6fa 50%, #eeeff6 100%);
+  --ucs-bg-hero-solid: #fbfbfa;
+  
+  --ucs-bg-section-alt: #ffffff;
+  --ucs-bg-card: #ffffff;
+  --ucs-bg-card-alt: #fbfbfa;
+  --ucs-bg-card-depth: #f4f6fa;
+  
+  --ucs-bg-navbar: rgba(255, 255, 255, 0.95);
+  --ucs-border-navbar: rgba(226, 232, 240, 0.90);
+  
+  --ucs-bg-menu: rgba(255, 255, 255, 0.98);
+  --ucs-border-menu: rgba(212, 168, 83, 0.35);
+
+  --ucs-text-primary: #0b1b3d;
+  --ucs-text-secondary: rgba(11, 27, 61, 0.75);
+  --ucs-text-muted: rgba(11, 27, 61, 0.60);
+  --ucs-text-subtle: rgba(11, 27, 61, 0.40);
+
+  --ucs-heading-gradient-from: #0b1b3d;
+  --ucs-heading-gradient-via: #1a3674;
+  --ucs-heading-gradient-to: #9b7428;
+
+  --ucs-navy-deep: #0b1b3d;
+  --ucs-navy-mid: #1a3674;
+  --ucs-navy-midnight: #060e20;
+
+  --ucs-gold: #d4a853;
+  --ucs-gold-light: #dfb76c;
+  --ucs-gold-hover: #c59b3f;
+  --ucs-gold-text: #9b7428;
+  --ucs-gold-text-contrast: #8a6218;
+  --ucs-gold-badge-bg: rgba(212, 168, 83, 0.12);
+  --ucs-gold-badge-border: rgba(212, 168, 83, 0.40);
+
+  --ucs-green: #059669;
+  --ucs-green-subtle: rgba(5, 150, 105, 0.12);
+
+  --ucs-border: rgba(11, 27, 61, 0.10);
+  --ucs-border-subtle: rgba(11, 27, 61, 0.06);
+  --ucs-border-hover: rgba(212, 168, 83, 0.50);
+
+  --ucs-3d-photo-frame: #ffffff;
+  --ucs-3d-photo-border: #ffffff;
+  --ucs-3d-anchor-bg: #0b1b3d;
+  --ucs-3d-anchor-text: #ffffff;
+  --ucs-3d-glass-bg: rgba(255, 255, 255, 0.95);
+  --ucs-3d-glass-border: rgba(226, 232, 240, 0.90);
+  --ucs-3d-glass-text: #0b1b3d;
+  --ucs-3d-glass-subtext: rgba(11, 27, 61, 0.65);
+  --ucs-3d-orb-gradient: radial-gradient(circle at 35% 25%, #fff6de, #d4a853 45%, #7a5816 100%);
+  --ucs-3d-orb-shadow: rgba(122, 88, 22, 0.25);
+
+  --ucs-grid-color: rgba(11, 27, 61, 0.7);
+  --ucs-grid-opacity: 0.035;
+
+  --ucs-glow-blue: rgba(29, 78, 216, 0.07);
+  --ucs-glow-gold: rgba(212, 168, 83, 0.10);
+
+  --ucs-shadow-sm: 0 4px 16px rgba(11, 27, 61, 0.06);
+  --ucs-shadow-md: 0 12px 30px rgba(11, 27, 61, 0.08);
+  --ucs-shadow-lg: 0 25px 60px rgba(11, 27, 61, 0.12);
+  --ucs-shadow-hero: 0 35px 80px rgba(11, 27, 61, 0.16);
+
+  --ucs-toggle-bg: rgba(11, 27, 61, 0.06);
+  --ucs-toggle-border: rgba(11, 27, 61, 0.15);
+  --ucs-toggle-icon: #0b1b3d;
+
+  --ucs-admissions-outer-bg: #fbfbfa;
+}
+
+[data-theme="dark"],
+.dark {
+  /* =========================================================
+     DARK THEME — Deep UCS 3D Navy & Luminous Gold
+     ========================================================= */
+  --ucs-bg-page: #0b1b3d;
+  --ucs-bg-page-rgb: 11, 27, 61;
+  
+  --ucs-bg-hero: #0b1b3d;
+  --ucs-bg-hero-solid: #0b1b3d;
+  
+  --ucs-bg-section-alt: #08142c;
+  --ucs-bg-card: #08142c;
+  --ucs-bg-card-alt: #0d2048;
+  --ucs-bg-card-depth: #071228;
+  
+  --ucs-bg-navbar: rgba(11, 27, 61, 0.88);
+  --ucs-border-navbar: rgba(255, 255, 255, 0.15);
+  
+  --ucs-bg-menu: rgba(11, 27, 61, 0.96);
+  --ucs-border-menu: rgba(212, 168, 83, 0.25);
+
+  --ucs-text-primary: #ffffff;
+  --ucs-text-secondary: rgba(255, 255, 255, 0.75);
+  --ucs-text-muted: rgba(255, 255, 255, 0.55);
+  --ucs-text-subtle: rgba(255, 255, 255, 0.40);
+
+  --ucs-heading-gradient-from: #ffffff;
+  --ucs-heading-gradient-via: #f5e6c4;
+  --ucs-heading-gradient-to: #d4a853;
+
+  --ucs-navy-deep: #0b1b3d;
+  --ucs-navy-mid: #1a3674;
+  --ucs-navy-midnight: #060e20;
+
+  --ucs-gold: #d4a853;
+  --ucs-gold-light: #dfb76c;
+  --ucs-gold-hover: #c59b3f;
+  --ucs-gold-text: #dfb76c;
+  --ucs-gold-text-contrast: #dfb76c;
+  --ucs-gold-badge-bg: rgba(212, 168, 83, 0.15);
+  --ucs-gold-badge-border: rgba(212, 168, 83, 0.35);
+
+  --ucs-green: #10b981;
+  --ucs-green-subtle: rgba(16, 185, 129, 0.20);
+
+  --ucs-border: rgba(255, 255, 255, 0.12);
+  --ucs-border-subtle: rgba(255, 255, 255, 0.08);
+  --ucs-border-hover: rgba(212, 168, 83, 0.40);
+
+  --ucs-3d-photo-frame: rgba(255, 255, 255, 0.15);
+  --ucs-3d-photo-border: rgba(255, 255, 255, 0.20);
+  --ucs-3d-anchor-bg: rgba(11, 27, 61, 0.85);
+  --ucs-3d-anchor-text: #ffffff;
+  --ucs-3d-glass-bg: rgba(11, 27, 61, 0.80);
+  --ucs-3d-glass-border: rgba(255, 255, 255, 0.15);
+  --ucs-3d-glass-text: #ffffff;
+  --ucs-3d-glass-subtext: rgba(255, 255, 255, 0.60);
+  --ucs-3d-orb-gradient: radial-gradient(circle at 30% 25%, #fff3d1, #d4a853 35%, #6b4e14 100%);
+  --ucs-3d-orb-shadow: rgba(212, 168, 83, 0.35);
+
+  --ucs-grid-color: rgba(255, 255, 255, 0.5);
+  --ucs-grid-opacity: 0.07;
+
+  --ucs-glow-blue: rgba(29, 78, 216, 0.15);
+  --ucs-glow-gold: rgba(212, 168, 83, 0.15);
+
+  --ucs-shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.30);
+  --ucs-shadow-md: 0 15px 40px rgba(0, 0, 0, 0.40);
+  --ucs-shadow-lg: 0 30px 70px rgba(0, 0, 0, 0.50);
+  --ucs-shadow-hero: 0 40px 100px rgba(0, 0, 0, 0.55);
+
+  --ucs-toggle-bg: rgba(255, 255, 255, 0.12);
+  --ucs-toggle-border: rgba(255, 255, 255, 0.20);
+  --ucs-toggle-icon: #dfb76c;
+
+  --ucs-admissions-outer-bg: #0b1b3d;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--ucs-bg-page);
+  --color-foreground: var(--ucs-text-primary);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+html,
 body {
-  background: var(--background);
-  color: var(--foreground);
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--ucs-bg-page);
+  color: var(--ucs-text-primary);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
