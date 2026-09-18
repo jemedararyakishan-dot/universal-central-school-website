@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
-import ThemeToggle from "@/components/ThemeToggle";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "About Us | Universal Central School",
@@ -13,124 +14,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <main className="overflow-hidden bg-[var(--ucs-bg-page)] text-[var(--ucs-text-primary)] transition-colors duration-300">
-      {/* =========================================================
-          NAVBAR (Consistent with Homepage — Adaptive Theme)
-      ========================================================= */}
-      <nav className="fixed left-0 right-0 top-0 z-50 px-3 pt-3 sm:px-4 sm:pt-4 md:px-8">
-        <div className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-[var(--ucs-border-navbar)] bg-[var(--ucs-bg-navbar)] px-4 py-3 shadow-[var(--ucs-shadow-sm)] backdrop-blur-xl transition-colors duration-300 md:px-6">
-          <Link href="/" className="flex items-center gap-2.5 sm:gap-3">
-            <div className="relative h-10 w-10 sm:h-12 sm:w-12 shrink-0 overflow-hidden rounded-xl border border-[var(--ucs-border)] bg-white shadow-sm">
-              <Image
-                src="/ucs-logo.png"
-                alt="Universal Central School logo"
-                fill
-                sizes="48px"
-                className="object-contain p-1"
-              />
-            </div>
-
-            <div className="block">
-              <p className="text-xs sm:text-sm font-semibold tracking-wide text-[var(--ucs-text-primary)]">
-                <span className="sm:hidden">UCS</span>
-                <span className="hidden sm:inline">UNIVERSAL CENTRAL SCHOOL</span>
-              </p>
-              <p className="text-[9px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.25em] text-[var(--ucs-gold-text)]">
-                Since 1994
-              </p>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation Links & Action Group */}
-          <div className="hidden items-center gap-6 text-sm font-medium text-[var(--ucs-text-secondary)] lg:flex">
-            <Link href="/" className="transition hover:text-[var(--ucs-gold-text)]">
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="font-semibold text-[var(--ucs-text-primary)] underline decoration-[#D4A853] decoration-2 underline-offset-8"
-            >
-              About
-            </Link>
-            <Link href="/#academics" className="transition hover:text-[var(--ucs-gold-text)]">
-              Academics
-            </Link>
-            <Link href="/#life" className="transition hover:text-[var(--ucs-gold-text)]">
-              Student Life
-            </Link>
-            <Link href="/#campus" className="transition hover:text-[var(--ucs-gold-text)]">
-              Campus
-            </Link>
-            <Link href="/#admissions" className="transition hover:text-[var(--ucs-gold-text)]">
-              Admissions
-            </Link>
-
-            <div className="flex items-center gap-3 border-l border-[var(--ucs-border)] pl-5">
-              {/* Polished Theme Toggle */}
-              <ThemeToggle />
-
-              <Link
-                href="/#contact"
-                className="rounded-full bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-4 lg:px-5 py-2 lg:py-2.5 text-xs font-semibold text-[#0B1733] shadow-[0_4px_16px_rgba(212,168,83,0.3)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_22px_rgba(212,168,83,0.45)]"
-              >
-                Enquire Now
-              </Link>
-            </div>
-          </div>
-
-          {/* Mobile Action Group: Theme Toggle & Menu Drawer */}
-          <div className="flex items-center gap-2.5 lg:hidden">
-            <ThemeToggle />
-
-            <details className="relative">
-              <summary className="cursor-pointer list-none rounded-xl border border-[var(--ucs-border)] bg-[var(--ucs-toggle-bg)] px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm font-medium text-[var(--ucs-text-primary)] transition hover:border-[var(--ucs-gold)]">
-                Menu
-              </summary>
-
-              <div className="absolute right-0 mt-3 w-56 max-w-[calc(100vw-2rem)] rounded-2xl border border-[var(--ucs-border-menu)] bg-[var(--ucs-bg-menu)] p-3 shadow-2xl backdrop-blur-xl transition-colors duration-300">
-                <Link
-                  href="/"
-                  className="block rounded-xl px-4 py-3 text-sm font-medium text-[var(--ucs-text-secondary)] hover:bg-[var(--ucs-toggle-bg)] hover:text-[var(--ucs-gold-text)]"
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/about"
-                  className="block rounded-xl bg-[var(--ucs-toggle-bg)] px-4 py-3 text-sm font-semibold text-[var(--ucs-text-primary)]"
-                >
-                  About
-                </Link>
-                <Link
-                  href="/#academics"
-                  className="block rounded-xl px-4 py-3 text-sm font-medium text-[var(--ucs-text-secondary)] hover:bg-[var(--ucs-toggle-bg)] hover:text-[var(--ucs-gold-text)]"
-                >
-                  Academics
-                </Link>
-                <Link
-                  href="/#life"
-                  className="block rounded-xl px-4 py-3 text-sm font-medium text-[var(--ucs-text-secondary)] hover:bg-[var(--ucs-toggle-bg)] hover:text-[var(--ucs-gold-text)]"
-                >
-                  Student Life
-                </Link>
-                <Link
-                  href="/#admissions"
-                  className="block rounded-xl px-4 py-3 text-sm font-medium text-[var(--ucs-text-secondary)] hover:bg-[var(--ucs-toggle-bg)] hover:text-[var(--ucs-gold-text)]"
-                >
-                  Admissions
-                </Link>
-
-                <div className="my-2 border-t border-[var(--ucs-border)] pt-2">
-                  <Link
-                    href="/#contact"
-                    className="block rounded-xl bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-4 py-3 text-center text-sm font-semibold text-[#0B1733] shadow-md"
-                  >
-                    Enquire Now
-                  </Link>
-                </div>
-              </div>
-            </details>
-          </div>
-        </div>
-      </nav>
+      {/* Shared Adaptive Navbar */}
+      <Navbar />
 
       {/* =========================================================
           1. CINEMATIC ABOUT HERO — ADAPTIVE THEME
@@ -758,13 +643,13 @@ export default function AboutPage() {
 
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
                 <Link
-                  href="/#academics"
+                  href="/academics"
                   className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 sm:px-8 py-3.5 sm:py-4 text-sm font-semibold text-white backdrop-blur-md transition duration-300 hover:-translate-y-0.5 hover:border-[#D4A853]/40 hover:bg-white/20 text-center"
                 >
                   Explore Academics
                 </Link>
                 <Link
-                  href="/#admissions"
+                  href="/admissions"
                   className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-6 sm:px-8 py-3.5 sm:py-4 text-sm font-bold text-[#0B1733] shadow-[0_10px_30px_rgba(212,168,83,0.35)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_15px_40px_rgba(212,168,83,0.5)] text-center"
                 >
                   Admissions & Enquiry →
@@ -775,105 +660,8 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* =========================================================
-          8. FOOTER (Matching Homepage — Deep UCS Blue Anchor)
-      ========================================================= */}
-      <footer id="contact" className="border-t border-[#D4A853]/20 bg-[#060E20] px-4 sm:px-6 md:px-8 pb-8 pt-14 sm:pt-18 md:pt-20 text-white">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4 lg:gap-12">
-            <div className="sm:col-span-2">
-              <div className="relative mb-5 sm:mb-6 h-16 w-16 sm:h-20 sm:w-20 overflow-hidden rounded-2xl bg-white shadow-md">
-                <Image
-                  src="/ucs-logo.png"
-                  alt="Universal Central School logo"
-                  fill
-                  sizes="80px"
-                  className="object-contain p-1"
-                />
-              </div>
-
-              <h3 className="text-xl sm:text-2xl font-semibold">
-                Universal Central School
-              </h3>
-
-              <p className="mt-2.5 sm:mt-3 max-w-sm text-xs sm:text-sm leading-5 sm:leading-6 text-white/55">
-                Building strong foundations for young minds since 1994.
-              </p>
-
-              <div className="mt-6 sm:mt-7 flex gap-3">
-                <a
-                  href="https://www.instagram.com/universal_central_school/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                  className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 transition hover:border-[#D4A853] hover:bg-[#D4A853] hover:text-[#060E20]"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                    <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" />
-                    <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-                  </svg>
-                </a>
-
-                <a
-                  href="https://www.youtube.com/@universalcentralschoolmbnr"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="YouTube"
-                  className="flex h-10 w-10 sm:h-11 sm:w-11 items-center justify-center rounded-full border border-white/10 transition hover:border-[#D4A853] hover:bg-[#D4A853] hover:text-[#060E20]"
-                >
-                  <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.6 15.7V8.3l6.4 3.7-6.4 3.7Z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-[#DFB76C]">
-                Explore
-              </p>
-
-              <div className="mt-4 sm:mt-5 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-white/65">
-                <Link href="/" className="block hover:text-[#DFB76C] transition-colors">
-                  Home
-                </Link>
-                <Link href="/about" className="block text-white font-medium hover:text-[#DFB76C] transition-colors">
-                  About Us
-                </Link>
-                <Link href="/#academics" className="block hover:text-[#DFB76C] transition-colors">
-                  Academics
-                </Link>
-                <Link href="/#life" className="block hover:text-[#DFB76C] transition-colors">
-                  Student Life
-                </Link>
-                <Link href="/#admissions" className="block hover:text-[#DFB76C] transition-colors">
-                  Admissions
-                </Link>
-              </div>
-            </div>
-
-            <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-[#DFB76C]">
-                Contact
-              </p>
-
-              <div className="mt-4 sm:mt-5 space-y-2.5 sm:space-y-3 text-xs sm:text-sm text-white/65">
-                <p>Mahabubnagar, Telangana</p>
-                <p>Universal Central School</p>
-
-                <a href="#" className="block text-white hover:text-[#DFB76C] transition-colors font-medium">
-                  Parent Login ↗
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 sm:mt-16 border-t border-white/10 pt-6 text-xs text-white/30">
-            © {new Date().getFullYear()} Universal Central School. All rights reserved.
-          </div>
-        </div>
-      </footer>
+      {/* Shared Footer */}
+      <Footer />
 
       {/* =========================================================
           ANIMATIONS & ACCESSIBILITY
