@@ -2,13 +2,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="overflow-hidden bg-[#f7f5f0] text-[#252344]">
+    <main className="overflow-hidden bg-[#F7F6F2] text-[#0B1B3D]">
 
       {/* =========================================================
           NAVBAR
       ========================================================= */}
       <nav className="fixed left-0 right-0 top-0 z-50 px-4 pt-4 md:px-8">
-        <div className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/20 bg-[#252344]/90 px-4 py-3 shadow-2xl backdrop-blur-xl md:px-6">
+        <div className="mx-auto flex max-w-7xl items-center justify-between rounded-2xl border border-white/15 bg-[#0B1B3D]/85 px-4 py-3 shadow-[0_8px_32px_rgba(3,10,25,0.4)] backdrop-blur-xl md:px-6">
 
           <a href="#" className="flex items-center gap-3">
             <div className="relative h-12 w-12 overflow-hidden rounded-xl bg-white">
@@ -25,22 +25,22 @@ export default function Home() {
               <p className="text-sm font-semibold tracking-wide text-white">
                 UNIVERSAL CENTRAL SCHOOL
               </p>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-white/50">
+              <p className="text-[10px] uppercase tracking-[0.25em] text-[#DFB76C]">
                 Since 1994
               </p>
             </div>
           </a>
 
           <div className="hidden items-center gap-7 text-sm text-white/80 lg:flex">
-            <a href="#about" className="transition hover:text-white">About</a>
-            <a href="#academics" className="transition hover:text-white">Academics</a>
-            <a href="#life" className="transition hover:text-white">Student Life</a>
-            <a href="#campus" className="transition hover:text-white">Campus</a>
-            <a href="#admissions" className="transition hover:text-white">Admissions</a>
+            <a href="#about" className="transition hover:text-[#DFB76C]">About</a>
+            <a href="#academics" className="transition hover:text-[#DFB76C]">Academics</a>
+            <a href="#life" className="transition hover:text-[#DFB76C]">Student Life</a>
+            <a href="#campus" className="transition hover:text-[#DFB76C]">Campus</a>
+            <a href="#admissions" className="transition hover:text-[#DFB76C]">Admissions</a>
 
             <a
               href="#contact"
-              className="rounded-full bg-white px-5 py-2.5 font-semibold text-[#252344] transition hover:-translate-y-0.5 hover:shadow-lg"
+              className="rounded-full bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-5 py-2.5 font-semibold text-[#0B1733] shadow-[0_4px_16px_rgba(212,168,83,0.35)] transition hover:-translate-y-0.5 hover:shadow-[0_6px_22px_rgba(212,168,83,0.5)]"
             >
               Enquire Now
             </a>
@@ -51,13 +51,13 @@ export default function Home() {
               Menu
             </summary>
 
-            <div className="absolute right-0 mt-3 w-52 rounded-2xl border border-white/10 bg-[#252344] p-3 shadow-2xl">
+            <div className="absolute right-0 mt-3 w-52 rounded-2xl border border-[#D4A853]/20 bg-[#0B1B3D]/95 p-3 shadow-2xl backdrop-blur-xl">
               {["About", "Academics", "Student Life", "Campus", "Admissions"].map(
                 (item) => (
                   <a
                     key={item}
                     href={`#${item === "Student Life" ? "life" : item.toLowerCase()}`}
-                    className="block rounded-xl px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-white"
+                    className="block rounded-xl px-4 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-[#DFB76C]"
                   >
                     {item}
                   </a>
@@ -66,7 +66,7 @@ export default function Home() {
 
               <a
                 href="#contact"
-                className="mt-2 block rounded-xl bg-white px-4 py-3 text-center text-sm font-semibold text-[#252344]"
+                className="mt-2 block rounded-xl bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-4 py-3 text-center text-sm font-semibold text-[#0B1733] shadow-md"
               >
                 Enquire Now
               </a>
@@ -78,11 +78,11 @@ export default function Home() {
       {/* =========================================================
           HERO — 3D EXPERIMENT
       ========================================================= */}
-      <section className="relative min-h-screen overflow-hidden bg-[#252344] pt-24">
+      <section className="relative min-h-screen overflow-hidden bg-[#0B1B3D] pt-24">
 
         {/* Ambient lighting */}
-        <div className="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-[#6d5dfc]/20 blur-[120px]" />
-        <div className="pointer-events-none absolute -right-40 bottom-0 h-[600px] w-[600px] rounded-full bg-[#d6b36a]/15 blur-[140px]" />
+        <div className="pointer-events-none absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-[#1D4ED8]/15 blur-[120px]" />
+        <div className="pointer-events-none absolute -right-40 bottom-0 h-[600px] w-[600px] rounded-full bg-[#D4A853]/15 blur-[140px]" />
 
         {/* Grid */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -98,9 +98,9 @@ export default function Home() {
           {/* LEFT */}
           <div className="relative z-20 max-w-2xl">
 
-            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 backdrop-blur-md">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-[#d6b36a]" />
-              <span className="text-xs font-medium uppercase tracking-[0.2em] text-white/70">
+            <div className="mb-7 inline-flex items-center gap-3 rounded-full border border-[#D4A853]/30 bg-[#D4A853]/10 px-4 py-2 backdrop-blur-md">
+              <span className="h-2 w-2 animate-pulse rounded-full bg-[#D4A853]" />
+              <span className="text-xs font-medium uppercase tracking-[0.2em] text-[#DFB76C]">
                 Established 1994
               </span>
             </div>
@@ -108,14 +108,14 @@ export default function Home() {
             <h1 className="text-6xl font-semibold leading-[0.9] tracking-[-0.06em] text-white sm:text-7xl lg:text-[7rem]">
               Where
               <br />
-              <span className="bg-gradient-to-r from-white via-white to-[#d6b36a] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-[#F5E6C4] to-[#D4A853] bg-clip-text text-transparent">
                 foundations
               </span>
               <br />
               begin.
             </h1>
 
-            <p className="mt-8 max-w-lg text-base leading-7 text-white/60 md:text-lg">
+            <p className="mt-8 max-w-lg text-base leading-7 text-white/70 md:text-lg">
               A place where curiosity becomes confidence, classrooms become
               experiences, and every child begins building their future.
             </p>
@@ -123,7 +123,7 @@ export default function Home() {
             <div className="mt-9 flex flex-wrap gap-4">
               <a
                 href="#about"
-                className="group rounded-full bg-white px-7 py-4 text-sm font-semibold text-[#252344] transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="group rounded-full bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-7 py-4 text-sm font-bold text-[#0B1733] shadow-[0_8px_25px_rgba(212,168,83,0.3)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_35px_rgba(212,168,83,0.45)]"
               >
                 Discover UCS
                 <span className="ml-3 inline-block transition group-hover:translate-x-1">
@@ -133,7 +133,7 @@ export default function Home() {
 
               <a
                 href="#admissions"
-                className="rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/10"
+                className="rounded-full border border-white/15 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:bg-white/10 hover:border-[#D4A853]/40"
               >
                 Admissions
               </a>
@@ -142,21 +142,21 @@ export default function Home() {
             <div className="mt-12 flex gap-10">
               <div>
                 <p className="text-3xl font-semibold text-white">30+</p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-white/40">
+                <p className="mt-1 text-xs uppercase tracking-widest text-[#DFB76C]/70">
                   Years
                 </p>
               </div>
 
               <div>
                 <p className="text-3xl font-semibold text-white">1800+</p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-white/40">
+                <p className="mt-1 text-xs uppercase tracking-widest text-[#DFB76C]/70">
                   Students
                 </p>
               </div>
 
               <div>
                 <p className="text-3xl font-semibold text-white">Nursery–VII</p>
-                <p className="mt-1 text-xs uppercase tracking-widest text-white/40">
+                <p className="mt-1 text-xs uppercase tracking-widest text-[#DFB76C]/70">
                   Learning
                 </p>
               </div>
@@ -167,9 +167,9 @@ export default function Home() {
           <div className="relative mx-auto h-[520px] w-full max-w-[620px] [perspective:1400px]">
 
             {/* Floating number */}
-            <div className="absolute right-5 top-0 z-30 animate-[float_5s_ease-in-out_infinite] rounded-2xl border border-white/10 bg-white/10 px-5 py-4 shadow-2xl backdrop-blur-xl">
+            <div className="absolute right-5 top-0 z-30 animate-[float_5s_ease-in-out_infinite] rounded-2xl border border-white/15 bg-[#0B1B3D]/70 px-5 py-4 shadow-2xl backdrop-blur-xl">
               <p className="text-3xl font-semibold text-white">1994</p>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-white/50">
+              <p className="text-[10px] uppercase tracking-[0.25em] text-[#DFB76C]">
                 The beginning
               </p>
             </div>
@@ -186,10 +186,10 @@ export default function Home() {
                 className="object-cover"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#17162f]/70 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#060E20]/80 via-transparent to-transparent" />
 
               <div className="absolute bottom-7 left-7">
-                <p className="text-xs uppercase tracking-[0.25em] text-white/60">
+                <p className="text-xs uppercase tracking-[0.25em] text-[#DFB76C]/80">
                   Universal Central School
                 </p>
                 <p className="mt-2 text-2xl font-medium text-white">
@@ -199,91 +199,91 @@ export default function Home() {
             </div>
 
             {/* Floating glass card */}
-            <div className="absolute bottom-8 right-0 z-20 w-52 animate-[float_6s_ease-in-out_infinite] rounded-3xl border border-white/15 bg-white/10 p-5 shadow-2xl backdrop-blur-xl [transform:translateZ(80px)]">
+            <div className="absolute bottom-8 right-0 z-20 w-52 animate-[float_6s_ease-in-out_infinite] rounded-3xl border border-white/15 bg-[#0B1B3D]/75 p-5 shadow-2xl backdrop-blur-xl [transform:translateZ(80px)]">
 
               <div className="mb-4 flex items-center justify-between">
                 <div className="flex -space-x-2">
-                  <div className="h-8 w-8 rounded-full border-2 border-[#252344] bg-[#d6b36a]" />
-                  <div className="h-8 w-8 rounded-full border-2 border-[#252344] bg-white" />
-                  <div className="h-8 w-8 rounded-full border-2 border-[#252344] bg-[#8178ff]" />
+                  <div className="h-8 w-8 rounded-full border-2 border-[#0B1B3D] bg-[#D4A853]" />
+                  <div className="h-8 w-8 rounded-full border-2 border-[#0B1B3D] bg-white" />
+                  <div className="h-8 w-8 rounded-full border-2 border-[#0B1B3D] bg-[#1E3A8A]" />
                 </div>
 
-                <span className="text-xs text-white/40">UCS</span>
+                <span className="text-xs font-semibold text-[#DFB76C]">UCS</span>
               </div>
 
               <p className="text-lg font-medium text-white">
                 More than a classroom.
               </p>
 
-              <p className="mt-2 text-xs leading-5 text-white/50">
+              <p className="mt-2 text-xs leading-5 text-white/60">
                 Learning through academics, activities and experiences.
               </p>
             </div>
 
             {/* 3D gold orb */}
-            <div className="absolute bottom-24 left-0 h-24 w-24 animate-[float_4s_ease-in-out_infinite] rounded-full bg-[radial-gradient(circle_at_30%_25%,#fff5c7,#d6b36a_35%,#70582b_100%)] shadow-[0_25px_70px_rgba(214,179,106,.35)] [transform:translateZ(120px)]" />
+            <div className="absolute bottom-24 left-0 h-24 w-24 animate-[float_4s_ease-in-out_infinite] rounded-full bg-[radial-gradient(circle_at_30%_25%,#FFF3D1,#D4A853_35%,#6B4E14_100%)] shadow-[0_25px_70px_rgba(212,168,83,.35)] [transform:translateZ(120px)]" />
 
           </div>
         </div>
 
         {/* Bottom fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#f7f5f0] to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#F7F6F2] to-transparent" />
       </section>
 
       {/* =========================================================
           ABOUT
       ========================================================= */}
-      <section id="about" className="relative bg-[#f7f5f0] px-6 py-28 md:px-8">
+      <section id="about" className="relative bg-[#F7F6F2] px-6 py-28 md:px-8">
 
         <div className="mx-auto max-w-7xl">
 
           <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr]">
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8178ff]">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#9B7428]">
                 01 / Our story
               </p>
 
-              <h2 className="mt-5 text-5xl font-semibold leading-[0.95] tracking-[-0.05em] md:text-7xl">
+              <h2 className="mt-5 text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-[#0B1B3D] md:text-7xl">
                 Built on
                 <br />
-                <span className="text-[#8178ff]">foundations.</span>
+                <span className="text-[#1A3674]">foundations.</span>
               </h2>
             </div>
 
             <div>
-              <p className="max-w-3xl text-2xl leading-relaxed text-[#252344]/75 md:text-3xl">
+              <p className="max-w-3xl text-2xl leading-relaxed text-[#0B1B3D]/80 md:text-3xl">
                 Since 1994, Universal Central School has focused on giving
                 children a strong beginning — academically, personally and
                 socially.
               </p>
 
-              <p className="mt-8 max-w-2xl leading-7 text-[#252344]/50">
+              <p className="mt-8 max-w-2xl leading-7 text-[#0B1B3D]/60">
                 Our approach combines a structured academic environment with
                 opportunities for students to explore creativity, sport,
                 culture, communication and leadership.
               </p>
 
-              <div className="mt-10 h-px w-full bg-[#252344]/10" />
+              <div className="mt-10 h-px w-full bg-[#0B1B3D]/10" />
 
               <div className="mt-8 flex flex-wrap gap-12">
                 <div>
-                  <p className="text-4xl font-semibold">1994</p>
-                  <p className="mt-2 text-sm text-[#252344]/40">
+                  <p className="text-4xl font-semibold text-[#0B1B3D]">1994</p>
+                  <p className="mt-2 text-sm text-[#0B1B3D]/50">
                     School founded
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-4xl font-semibold">1800+</p>
-                  <p className="mt-2 text-sm text-[#252344]/40">
+                  <p className="text-4xl font-semibold text-[#0B1B3D]">1800+</p>
+                  <p className="mt-2 text-sm text-[#0B1B3D]/50">
                     Students
                   </p>
                 </div>
 
                 <div>
-                  <p className="text-4xl font-semibold">VII</p>
-                  <p className="mt-2 text-sm text-[#252344]/40">
+                  <p className="text-4xl font-semibold text-[#0B1B3D]">VII</p>
+                  <p className="mt-2 text-sm text-[#0B1B3D]/50">
                     Highest grade
                   </p>
                 </div>
@@ -299,19 +299,20 @@ export default function Home() {
       ========================================================= */}
       <section id="academics" className="relative overflow-hidden bg-white px-6 py-28 md:px-8">
 
-        <div className="absolute -right-32 top-20 h-96 w-96 rounded-full bg-[#8178ff]/10 blur-[100px]" />
+        <div className="absolute -right-32 top-20 h-96 w-96 rounded-full bg-[#1A3674]/5 blur-[100px]" />
+        <div className="absolute -left-32 bottom-20 h-96 w-96 rounded-full bg-[#D4A853]/5 blur-[100px]" />
 
         <div className="relative mx-auto max-w-7xl">
 
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8178ff]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#9B7428]">
               02 / Academics
             </p>
 
-            <h2 className="mt-5 text-5xl font-semibold leading-none tracking-[-0.05em] md:text-7xl">
+            <h2 className="mt-5 text-5xl font-semibold leading-none tracking-[-0.05em] text-[#0B1B3D] md:text-7xl">
               Learning that
               <br />
-              <span className="text-[#8178ff]">goes deeper.</span>
+              <span className="text-[#1A3674]">goes deeper.</span>
             </h2>
           </div>
 
@@ -336,20 +337,20 @@ export default function Home() {
             ].map((item) => (
               <div
                 key={item.number}
-                className="group relative min-h-[330px] overflow-hidden rounded-[2rem] border border-[#252344]/10 bg-[#f7f5f0] p-8 transition duration-500 hover:-translate-y-3 hover:shadow-2xl"
+                className="group relative min-h-[330px] overflow-hidden rounded-[2rem] border border-[#0B1B3D]/10 bg-[#F7F6F2] p-8 transition duration-500 hover:-translate-y-3 hover:border-[#D4A853]/40 hover:shadow-2xl"
               >
-                <span className="text-sm font-semibold text-[#8178ff]">
+                <span className="text-sm font-semibold text-[#9B7428]">
                   {item.number}
                 </span>
 
-                <div className="absolute right-[-30px] top-[-30px] h-32 w-32 rounded-full border border-[#8178ff]/10 transition duration-700 group-hover:scale-150" />
+                <div className="absolute right-[-30px] top-[-30px] h-32 w-32 rounded-full border border-[#D4A853]/20 transition duration-700 group-hover:scale-150" />
 
                 <div className="absolute bottom-8 left-8 right-8">
-                  <h3 className="text-2xl font-semibold">
+                  <h3 className="text-2xl font-semibold text-[#0B1B3D]">
                     {item.title}
                   </h3>
 
-                  <p className="mt-4 text-sm leading-6 text-[#252344]/50">
+                  <p className="mt-4 text-sm leading-6 text-[#0B1B3D]/60">
                     {item.text}
                   </p>
                 </div>
@@ -363,7 +364,7 @@ export default function Home() {
       {/* =========================================================
           CLASSROOM — DEPTH CARD
       ========================================================= */}
-      <section className="relative overflow-hidden bg-[#252344] px-6 py-28 md:px-8">
+      <section className="relative overflow-hidden bg-[#0B1B3D] px-6 py-28 md:px-8">
 
         <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
 
@@ -378,13 +379,13 @@ export default function Home() {
                 className="object-cover"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#252344]/80 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0B1B3D]/90 via-[#0B1B3D]/20 to-transparent" />
             </div>
 
             {/* floating label */}
-            <div className="absolute -bottom-7 -right-5 rounded-3xl border border-white/10 bg-white/10 p-6 shadow-2xl backdrop-blur-xl md:right-8">
-              <p className="text-4xl font-semibold text-white">01</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/40">
+            <div className="absolute -bottom-7 -right-5 rounded-3xl border border-[#D4A853]/30 bg-[#060E20]/85 p-6 shadow-2xl backdrop-blur-xl md:right-8">
+              <p className="text-4xl font-semibold text-[#DFB76C]">01</p>
+              <p className="mt-1 text-xs uppercase tracking-[0.25em] text-white/50">
                 Classroom
               </p>
             </div>
@@ -392,17 +393,17 @@ export default function Home() {
           </div>
 
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#d6b36a]">
+            <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#DFB76C]">
               The classroom
             </p>
 
             <h2 className="mt-5 text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-white md:text-7xl">
               Where ideas
               <br />
-              <span className="text-white/40">take shape.</span>
+              <span className="text-white/45">take shape.</span>
             </h2>
 
-            <p className="mt-8 max-w-xl text-lg leading-8 text-white/50">
+            <p className="mt-8 max-w-xl text-lg leading-8 text-white/65">
               Every classroom is a starting point — a space for questions,
               conversations, discovery and the development of strong
               fundamentals.
@@ -410,7 +411,7 @@ export default function Home() {
 
             <a
               href="#contact"
-              className="mt-10 inline-flex items-center rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-white transition hover:bg-white hover:text-[#252344]"
+              className="mt-10 inline-flex items-center rounded-full border border-[#D4A853]/40 bg-[#D4A853]/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-[#D4A853] hover:text-[#0B1733] hover:border-[#D4A853]"
             >
               Explore UCS
               <span className="ml-4">↗</span>
@@ -423,25 +424,25 @@ export default function Home() {
       {/* =========================================================
           STUDENT LIFE
       ========================================================= */}
-      <section id="life" className="relative bg-[#f7f5f0] px-6 py-28 md:px-8">
+      <section id="life" className="relative bg-[#F7F6F2] px-6 py-28 md:px-8">
 
         <div className="mx-auto max-w-7xl">
 
           <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
 
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#8178ff]">
+              <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#9B7428]">
                 03 / Beyond the classroom
               </p>
 
-              <h2 className="mt-5 text-5xl font-semibold tracking-[-0.05em] md:text-7xl">
+              <h2 className="mt-5 text-5xl font-semibold tracking-[-0.05em] text-[#0B1B3D] md:text-7xl">
                 More ways
                 <br />
-                <span className="text-[#8178ff]">to grow.</span>
+                <span className="text-[#1A3674]">to grow.</span>
               </h2>
             </div>
 
-            <p className="max-w-md text-sm leading-6 text-[#252344]/50">
+            <p className="max-w-md text-sm leading-6 text-[#0B1B3D]/60">
               Dance. Karate. Sports. Cultural activities. Projects.
               Experiences that allow students to discover interests and build
               confidence beyond academics.
@@ -460,10 +461,10 @@ export default function Home() {
                 className="object-cover transition duration-700 group-hover:scale-105"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-[#252344]/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#060E20]/85 via-transparent to-transparent" />
 
               <div className="absolute bottom-8 left-8">
-                <p className="text-xs uppercase tracking-[0.25em] text-white/50">
+                <p className="text-xs uppercase tracking-[0.25em] text-[#DFB76C]/80">
                   Student life
                 </p>
                 <p className="mt-2 text-3xl font-medium text-white">
@@ -474,10 +475,10 @@ export default function Home() {
 
             <div className="grid gap-5 md:col-span-2">
 
-              <div className="group relative overflow-hidden rounded-[2rem] bg-[#252344] p-8 transition duration-500 hover:-translate-y-2">
+              <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#0B1B3D] p-8 shadow-xl transition duration-500 hover:-translate-y-2 hover:border-[#D4A853]/30">
                 <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full border border-white/10 transition duration-700 group-hover:scale-125" />
 
-                <p className="text-xs uppercase tracking-[0.25em] text-white/40">
+                <p className="text-xs uppercase tracking-[0.25em] text-[#DFB76C]/75">
                   Movement
                 </p>
 
@@ -485,22 +486,22 @@ export default function Home() {
                   Dance & Karate
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-white/40">
+                <p className="mt-3 text-sm leading-6 text-white/50">
                   Discipline, expression and confidence through activity.
                 </p>
               </div>
 
-              <div className="group relative overflow-hidden rounded-[2rem] bg-[#d6b36a] p-8 transition duration-500 hover:-translate-y-2">
+              <div className="group relative overflow-hidden rounded-[2rem] border border-[#FFF0C2]/20 bg-gradient-to-br from-[#D4A853] via-[#C99C3D] to-[#B38328] p-8 shadow-xl transition duration-500 hover:-translate-y-2">
 
-                <p className="text-xs uppercase tracking-[0.25em] text-[#252344]/50">
+                <p className="text-xs uppercase tracking-[0.25em] text-[#0A1733]/60 font-semibold">
                   Exploration
                 </p>
 
-                <h3 className="mt-20 text-3xl font-semibold text-[#252344]">
+                <h3 className="mt-20 text-3xl font-semibold text-[#0A1733]">
                   Projects & Culture
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-[#252344]/50">
+                <p className="mt-3 text-sm leading-6 text-[#0A1733]/75 font-medium">
                   Opportunities to create, present and participate.
                 </p>
               </div>
@@ -514,29 +515,31 @@ export default function Home() {
       {/* =========================================================
           BIG BRAND MOMENT
       ========================================================= */}
-      <section className="relative overflow-hidden bg-[#8178ff] px-6 py-32 md:px-8">
+      <section className="relative overflow-hidden border-y border-[#D4A853]/20 bg-[#081530] px-6 py-32 md:px-8">
 
-        <div className="pointer-events-none absolute inset-0 opacity-20"
+        <div className="pointer-events-none absolute inset-0 opacity-15"
           style={{
             backgroundImage:
-              "radial-gradient(circle at center, white 1px, transparent 1px)",
+              "radial-gradient(circle at center, rgba(212,168,83,0.6) 1px, transparent 1px)",
             backgroundSize: "35px 35px",
           }}
         />
 
+        <div className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-[#1D4ED8]/15 blur-[140px]" />
+
         <div className="relative mx-auto max-w-7xl text-center">
 
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-white/60">
+          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#DFB76C]">
             Universal Central School
           </p>
 
-          <h2 className="mt-8 text-[22vw] font-black leading-[0.7] tracking-[-0.09em] text-white md:text-[15rem]">
+          <h2 className="mt-8 text-[22vw] font-black leading-[0.7] tracking-[-0.09em] bg-gradient-to-b from-white via-[#EAEFF8] to-[#92A7CC] bg-clip-text text-transparent drop-shadow-[0_15px_30px_rgba(0,0,0,0.5)] md:text-[15rem]">
             UCS
           </h2>
 
-          <p className="mx-auto mt-16 max-w-2xl text-lg leading-8 text-white/70">
+          <p className="mx-auto mt-16 max-w-2xl text-lg leading-8 text-[#C4D1E8]">
             A school is more than a building. It is the beginning of a
-            student's relationship with learning, confidence and possibility.
+            student&apos;s relationship with learning, confidence and possibility.
           </p>
 
         </div>
@@ -545,16 +548,16 @@ export default function Home() {
       {/* =========================================================
           ADMISSIONS
       ========================================================= */}
-      <section id="admissions" className="bg-[#f7f5f0] px-6 py-28 md:px-8">
+      <section id="admissions" className="bg-[#F7F6F2] px-6 py-28 md:px-8">
 
         <div className="mx-auto max-w-7xl">
 
-          <div className="rounded-[2.5rem] bg-[#252344] p-8 md:p-14 lg:p-20">
+          <div className="relative overflow-hidden rounded-[2.5rem] border border-[#D4A853]/25 bg-gradient-to-br from-[#0B1B3D] via-[#0D214D] to-[#071228] p-8 shadow-2xl md:p-14 lg:p-20">
 
-            <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div className="relative z-10 grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
 
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#d6b36a]">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-[#DFB76C]">
                   Admissions
                 </p>
 
@@ -564,7 +567,7 @@ export default function Home() {
                   a strong beginning.
                 </h2>
 
-                <p className="mt-7 max-w-xl leading-7 text-white/50">
+                <p className="mt-7 max-w-xl leading-7 text-white/65">
                   Get in touch with Universal Central School to learn more
                   about admissions, the school and the learning environment.
                 </p>
@@ -572,7 +575,7 @@ export default function Home() {
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-[#252344] transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-8 py-4 text-sm font-bold text-[#0B1733] shadow-[0_10px_30px_rgba(212,168,83,0.35)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(212,168,83,0.5)]"
               >
                 Enquire Now
                 <span className="ml-4">→</span>
@@ -586,7 +589,7 @@ export default function Home() {
       {/* =========================================================
           CONTACT / FOOTER
       ========================================================= */}
-      <footer id="contact" className="bg-[#17162f] px-6 pb-8 pt-20 text-white md:px-8">
+      <footer id="contact" className="border-t border-[#D4A853]/20 bg-[#060E20] px-6 pb-8 pt-20 text-white md:px-8">
 
         <div className="mx-auto max-w-7xl">
 
@@ -608,7 +611,7 @@ export default function Home() {
                 Universal Central School
               </h3>
 
-              <p className="mt-3 max-w-sm text-sm leading-6 text-white/40">
+              <p className="mt-3 max-w-sm text-sm leading-6 text-white/50">
                 Building strong foundations for young minds since 1994.
               </p>
 
@@ -619,7 +622,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 transition hover:bg-white hover:text-[#17162f]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 transition hover:border-[#D4A853] hover:bg-[#D4A853] hover:text-[#060E20]"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                     <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2"/>
@@ -633,7 +636,7 @@ export default function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 transition hover:bg-white hover:text-[#17162f]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 transition hover:border-[#D4A853] hover:bg-[#D4A853] hover:text-[#060E20]"
                 >
                   <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8ZM9.6 15.7V8.3l6.4 3.7-6.4 3.7Z"/>
@@ -644,20 +647,20 @@ export default function Home() {
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-white/30">
+              <p className="text-xs uppercase tracking-[0.25em] text-white/40">
                 Explore
               </p>
 
               <div className="mt-5 space-y-3 text-sm text-white/60">
-                <a href="#about" className="block hover:text-white">About Us</a>
-                <a href="#academics" className="block hover:text-white">Academics</a>
-                <a href="#life" className="block hover:text-white">Student Life</a>
-                <a href="#admissions" className="block hover:text-white">Admissions</a>
+                <a href="#about" className="block hover:text-[#DFB76C] transition-colors">About Us</a>
+                <a href="#academics" className="block hover:text-[#DFB76C] transition-colors">Academics</a>
+                <a href="#life" className="block hover:text-[#DFB76C] transition-colors">Student Life</a>
+                <a href="#admissions" className="block hover:text-[#DFB76C] transition-colors">Admissions</a>
               </div>
             </div>
 
             <div>
-              <p className="text-xs uppercase tracking-[0.25em] text-white/30">
+              <p className="text-xs uppercase tracking-[0.25em] text-white/40">
                 Contact
               </p>
 
@@ -667,7 +670,7 @@ export default function Home() {
 
                 <a
                   href="#"
-                  className="block text-white hover:text-[#d6b36a]"
+                  className="block text-white hover:text-[#DFB76C] transition-colors font-medium"
                 >
                   Parent Login ↗
                 </a>
@@ -676,13 +679,12 @@ export default function Home() {
 
           </div>
 
-          <div className="mt-16 border-t border-white/10 pt-6 text-xs text-white/25">
+          <div className="mt-16 border-t border-white/10 pt-6 text-xs text-white/30">
             © {new Date().getFullYear()} Universal Central School. All rights reserved.
           </div>
 
         </div>
       </footer>
-
       {/* =========================================================
           ANIMATION ENGINE
       ========================================================= */}
