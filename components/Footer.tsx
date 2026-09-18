@@ -163,6 +163,138 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Site-wide Campus Locations & Google Maps Directions */}
+        <div className="mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-white/10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-6 sm:mb-8">
+            <div>
+              <div className="flex items-center gap-2 text-[#DFB76C] text-xs font-semibold uppercase tracking-[0.25em]">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>Campus Locations · Mahabubnagar</span>
+              </div>
+              <h4 className="mt-2 text-xl sm:text-2xl font-bold tracking-tight text-white">
+                Visit Universal Central School
+              </h4>
+              <p className="mt-1 text-xs sm:text-sm text-white/60 max-w-xl">
+                Parents and visitors are welcome during regular operational hours. Open your preferred branch directly in Google Maps for live GPS navigation.
+              </p>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/search/Universal+Central+School+Mahabubnagar"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 self-start md:self-auto rounded-xl border border-[#D4A853]/40 bg-[#D4A853]/10 px-4 py-2.5 text-xs font-semibold text-[#DFB76C] hover:bg-[#D4A853] hover:text-[#060E20] transition-all duration-300"
+            >
+              <span>Explore All on Google Maps</span>
+              <span className="text-[11px]">↗</span>
+            </a>
+          </div>
+
+          {/* Dual Branch Location Cards */}
+          <div className="grid gap-5 sm:grid-cols-2">
+            {/* Campus 1: Mettugadda */}
+            <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-5 sm:p-6 backdrop-blur-md transition-all duration-300 hover:border-[#D4A853]/60 hover:shadow-[0_8px_30px_rgba(212,168,83,0.12)]">
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#D4A853]/20 text-[#DFB76C] text-xs font-bold">
+                    01
+                  </span>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#DFB76C]">
+                      Branch Campus 01
+                    </span>
+                    <h5 className="text-base sm:text-lg font-bold text-white leading-tight">
+                      Mettugadda Branch
+                    </h5>
+                  </div>
+                </div>
+
+                <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-medium text-emerald-300 shrink-0">
+                  Nursery – Class VII
+                </span>
+              </div>
+
+              <p className="mt-3 text-xs sm:text-sm text-white/70 leading-relaxed">
+                Universal Central School, Mettugadda, Mahabubnagar, Telangana, India.
+              </p>
+
+              <div className="mt-5 flex flex-wrap items-center gap-2.5 pt-4 border-t border-white/10">
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Universal+Central+School+Mettugadda+Mahabubnagar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-4 py-2.5 text-xs font-bold text-[#060E20] shadow-sm transition-all duration-300 hover:scale-[1.02] hover:brightness-105 active:scale-[0.98]"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                  </svg>
+                  <span>Get Directions</span>
+                  <span className="text-[10px]">↗</span>
+                </a>
+
+                <a
+                  href="tel:+919848228013"
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-3.5 py-2.5 text-xs font-medium text-white/85 hover:border-[#D4A853] hover:text-[#DFB76C] transition-all"
+                >
+                  <span>📞 +91 9848228013</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Campus 2: Sri Ramakrishna Colony */}
+            <div className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.07] to-white/[0.02] p-5 sm:p-6 backdrop-blur-md transition-all duration-300 hover:border-[#D4A853]/60 hover:shadow-[0_8px_30px_rgba(212,168,83,0.12)]">
+              <div className="flex items-start justify-between gap-3">
+                <div className="flex items-center gap-2">
+                  <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-[#D4A853]/20 text-[#DFB76C] text-xs font-bold">
+                    02
+                  </span>
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#DFB76C]">
+                      Branch Campus 02
+                    </span>
+                    <h5 className="text-base sm:text-lg font-bold text-white leading-tight">
+                      Sri Ramakrishna Colony
+                    </h5>
+                  </div>
+                </div>
+
+                <span className="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-[10px] font-medium text-emerald-300 shrink-0">
+                  Nursery – Class VII
+                </span>
+              </div>
+
+              <p className="mt-3 text-xs sm:text-sm text-white/70 leading-relaxed">
+                Universal Central School, Sri Ramakrishna Colony, Yenugonda, Mahabubnagar, Telangana, India.
+              </p>
+
+              <div className="mt-5 flex flex-wrap items-center gap-2.5 pt-4 border-t border-white/10">
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=Universal+Central+School+Sri+Ramakrishna+Colony+Yenugonda+Mahabubnagar"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#D4A853] via-[#DFB76C] to-[#C59B3F] px-4 py-2.5 text-xs font-bold text-[#060E20] shadow-sm transition-all duration-300 hover:scale-[1.02] hover:brightness-105 active:scale-[0.98]"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polygon points="3 11 22 2 13 21 11 13 3 11" />
+                  </svg>
+                  <span>Get Directions</span>
+                  <span className="text-[10px]">↗</span>
+                </a>
+
+                <a
+                  href="tel:+917842383082"
+                  className="inline-flex items-center gap-1.5 rounded-xl border border-white/15 bg-white/5 px-3.5 py-2.5 text-xs font-medium text-white/85 hover:border-[#D4A853] hover:text-[#DFB76C] transition-all"
+                >
+                  <span>📞 +91 7842383082</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-12 sm:mt-16 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/40">
           <p>© {currentYear} Universal Central School. All rights reserved.</p>
           <p className="text-[11px] text-white/30">Nursery to Grade VII · English Medium · Est. 1994</p>
